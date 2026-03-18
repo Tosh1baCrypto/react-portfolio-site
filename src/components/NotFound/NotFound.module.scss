@@ -1,0 +1,59 @@
+@use "@/styles/helps/mixin" as *;
+
+.container {
+  display: flex;
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  column-gap: rem(40);
+  padding: rem(5);
+  background-color: var(--notfound-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.text {
+  font-size: rem(60);
+}
+
+.logo {
+  width: rem(300);
+  height: rem(300);
+  fill: var(--notfound-logo-color);
+}
+
+
+.exit-button {
+	display: inline-block;
+	height: rem(48);
+	padding: rem(12) rem(30);
+  margin-left: 6px;
+
+	border-radius: rem(5);
+	background-color: var(--accent);
+	color: var(--white);
+  text-decoration: none;
+	letter-spacing: 0.15px;
+	font-size: rem(20);
+	font-weight: 500;
+
+  border: none;
+  outline: none;
+  box-shadow: 0 rem(5) 0 0 var(--purple-2);
+
+	transition: var(--transition-duration);
+
+  &:hover {
+	  opacity: 0.8;
+  }
+
+  &:active {
+    transform: translateY(5px);
+    box-shadow: 0 0 0 0 var(--purple-2);
+  }
+}
+
+@media (max-width: 620px) {
+  .logo {
+    display: none;
+  }
+}

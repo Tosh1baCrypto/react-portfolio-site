@@ -1,0 +1,28 @@
+@use "@/styles/helps/mixin" as *;
+
+.content-list {
+	display: flex;
+  column-gap: 1rem;
+	align-items: center;
+	text-align: center;
+
+  a {
+    color: var(--accent);
+  }
+}
+
+.item {
+  max-width: rem(570);
+	font-size: fluid(18, 16);
+	line-height: 1.5;
+
+  p:not(:last-child) {
+    padding-bottom: 0.5em;
+  }
+}
+
+@media (max-width: 620px) {
+  .content-list {
+    row-gap: rem(20);
+  }
+}

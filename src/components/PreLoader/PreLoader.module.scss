@@ -1,0 +1,46 @@
+@use "@/styles/helps/mixin" as *;
+
+.preloader {
+  height: 100vh;
+  width: 100%;
+  background: var(--nav-bg);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  touch-action: none;
+  transition: transform 1s cubic-bezier(0.85, 0, 0.15, 1);
+
+  &.hidden {
+    transform: translateY(-100%);
+  }
+}
+
+.spinner {
+  z-index: 1001;
+  display: flex;
+  width: rem(100);
+  height: rem(100);
+  fill: var(--white);
+  
+  animation: rotate 2s linear infinite;
+  
+  svg {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

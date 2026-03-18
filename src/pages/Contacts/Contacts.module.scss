@@ -1,0 +1,65 @@
+@use "@/styles/helps/mixin" as *;
+.content-list {
+  display: flex;
+  align-items: center;
+  align-items: stretch;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: rem(30);
+	row-gap: rem(30);
+}
+
+.item {
+	max-width: rem(370);
+  box-sizing: border-box;
+  background: var(--black);
+  backdrop-filter: blur(6px);
+  border-radius: rem(17);
+  text-align: center;
+  transition: var(--transition-duration);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: rem(20);
+  justify-content: center;
+  user-select: none;
+  font-weight: bolder;
+  overflow: hidden;
+
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+
+  @media (hover: hover) {
+    &:hover {
+      box-shadow: var(--box-shadow);
+      transform: scale(1.03);
+    }
+  }
+
+  &:active {
+    transform: scale(0.97);
+    box-shadow: none;
+    transition: var(--transition-duration);
+  }
+
+}
+
+.img {
+  width: 100%;
+  height: rem(250);
+  object-fit: cover;
+	border-radius: rem(17)
+}
+
+.icon {
+  width: rem(35);
+  height: rem(35);
+  padding-bottom: rem(20);
+  display: flex;
+  align-items: center;
+  
+  svg {
+    width: 100%;
+    fill: var(--white);
+  }
+}

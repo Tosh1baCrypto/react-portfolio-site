@@ -1,0 +1,13 @@
+@use "@/styles/helps/mixin" as *;
+
+.projects {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	column-gap: rem(30);
+	row-gap: rem(30);
+
+  a {
+    text-decoration: none;
+  }
+}

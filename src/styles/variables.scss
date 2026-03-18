@@ -1,0 +1,57 @@
+:root {
+
+	--blackpure: #000;
+	--black: #171718;
+	--black-2: #2c2c2c;
+	--black-3: #2f2f2f;
+	--white: #ffffff;
+	--purple: #dd72c4;
+	--purple-2: #e0b5d6;
+  --grey-1: #d6d6d6;
+  --grey-2: #b5b5b5;
+  --grey-3: #686868;
+  --grey-4: #252526;
+
+	--border: var(--grey-4);
+  
+	--nav-bg: var(--black);
+	--nav-text: var(--white);
+  --nav-burger-button: var(--white);
+  
+	--header-bg: var(--black);
+	--header-text: var(--white);
+  --header-bg-logo: url('@/img/back-gr-black.svg');
+  
+	--footer-bg: var(--black);
+	--footer-text: var(--white);
+  --footer-hover: var(--grey)
+  
+	--page-bg: var(--white);
+	--text-color: var(--black);
+	--accent: var(--purple);
+  --accent-2: var(--purple-2);
+	--title-1: var(--black);
+  
+	--project-card-bg: var(--black);
+	--project-card-text: var(--white);
+	--box-shadow: 0px 0px 25px rgba(0, 0, 0, 1);
+  
+  --notfound-logo-color: var(--white)
+  --notfound-bg: var(--black);
+  
+  --transition-duration: all 0.2s ease;
+  
+}
+
+.dark {
+  --page-bg: var(--grey-4);
+	--text-color: var(--white);
+  
+	--title-1: var(--white);
+  --border: var(--black-3);
+  
+	--box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.8);
+  
+  --notfound-logo-color: var(--grey-1);
+  --notfound-bg: var(--black);
+}
