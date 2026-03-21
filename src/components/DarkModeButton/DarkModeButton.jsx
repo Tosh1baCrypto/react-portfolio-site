@@ -40,8 +40,8 @@ const DarkModeButton = () => {
 
   return (
     <button className={darkMode === 'dark' ? btnActive : btnNormal} onClick={toggleDarkMode}>
-      <img src={sun} alt="Light mode" className={s.icon} />
-      <img src={moon} alt="Dark mode" className={s.icon} />
+      <img src={sun} alt="Light mode" className={s.icon} loading='lazy'/>
+      <img src={moon} alt="Dark mode" className={s.icon} loading='lazy'/>
     </button>
   )
 }

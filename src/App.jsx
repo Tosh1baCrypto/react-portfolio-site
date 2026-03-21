@@ -35,7 +35,7 @@ const App = () => {
     <div className='app'>
       <PreLoader isLoading={loading} />
 
-      <Router>
+      <Router basename="/react-portfolio-site/">
         <ScrollToTop />
         <Nav/>
 

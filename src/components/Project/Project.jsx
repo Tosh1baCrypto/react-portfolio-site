@@ -12,7 +12,7 @@ const Project = (props) => {
   return (
     <li className={s.project}>
         <Link to={`/project/${id}`}>
-            <img src={img} alt="Project img" className={s.img} />
+            <img src={img} alt="Project img" className={s.img} loading='lazy'/>
             <h3 className={s.title}>{title}</h3>
         </Link>
     </li>

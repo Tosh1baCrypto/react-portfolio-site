@@ -19,7 +19,7 @@ const ProjectPage = () => {
         <div className="container">
             <div className={s['project-details']}>
                 <h1 className="title-1">{project.title}</h1>
-                <img src={project.imgB} alt="" className={s.cover} />
+                <img src={project.imgB} alt="" className={s.cover} loading='lazy'/>
                 <div className={s.desc}>
                     <p>{project.skills}</p>
                 </div>
