@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { lazy, Suspense, useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import PreLoader from './components/PreLoader/PreLoader'
@@ -6,13 +6,14 @@ import ScrollToTop from './utils/ScrollToTop'
 
 import Footer from '@/components/footer/Footer'
 import Nav from '@/components/Nav/Nav'
-import Home from '@/pages/Home/Home'
-import Projects from './pages/Projects/Projects'
-import ProjectPage from './pages/ProjectPage/ProjectPage'
-import Contacts from './pages/Contacts/Contacts'
+
+const Home = lazy(() => import('@/pages/Home/Home'))
+const Projects = lazy(() => import('./pages/Projects/Projects'))
+const ProjectPage = lazy(() => import('./pages/ProjectPage/ProjectPage'))
+const Contacts = lazy(() => import('./pages/Contacts/Contacts'))
+const NotFound = lazy(() => import('./components/NotFound/NotFound'))
 
 import '@/styles'
-import NotFound from './components/NotFound/NotFound'
 
 const App = () => {
   const [loading, setLoading] = useState(true)
@@ -40,13 +41,13 @@ const App = () => {
         <Nav/>
 
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/projects" element={<Projects />} />
-          <Route path="project/:id" element={<ProjectPage />}/>
-          <Route path="/contacts" element={<Contacts />} />
+          <Route path="/" element={<Suspense> <Home /> </Suspense>} />
+          <Route path="/projects" element={<Suspense> <Projects /> </Suspense>} />
+          <Route path="project/:id" element={<Suspense> <ProjectPage /> </Suspense>} />
+          <Route path="/contacts" element={<Suspense> <Contacts /> </Suspense>} />
 
-          <Route path="/404" element={<NotFound />} />
-          <Route path="*" element={<NotFound />} />
+          <Route path="/404" element={<Suspense> <NotFound /> </Suspense>} />
+          <Route path="*" element={<Suspense> <NotFound /> </Suspense>} />
         </Routes>
 
         <Footer />
